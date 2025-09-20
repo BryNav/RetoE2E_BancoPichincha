@@ -1,4 +1,4 @@
-🛒 Proyecto: Reto TCS – Automatización E2E de Compra
+🛒 Proyecto: Reto – Automatización E2E de Compra
 📖 Descripción
 
 Este proyecto implementa la automatización de extremo a extremo (E2E) del flujo de compra de productos en el sitio DemoBlaze
@@ -63,22 +63,12 @@ Navegador Google Chrome
 
 🔹 Pasos para ejecutar
 
-Clonar el repositorio:
-
-git clone https://github.com/tu-usuario/reto-tcs-automatizacion.git
-
-
-Posicionarse en la carpeta del proyecto:
-
-cd reto-tcs-automatizacion
-
-
 Ejecutar las pruebas con Maven:
 
 mvn clean verify
 
 📌 Escenario Automatizado (Gherkin)
-Feature: RETO TCS – Realizar E2E del proceso de compra de 2 productos
+Feature: RETO – Realizar E2E del proceso de compra de 2 productos
 
   Scenario: Usuario realiza ingreso satisfactorio y compra de productos
     Given El usuario apertura la pagina
