@@ -1,7 +1,9 @@
-Proyecto: Reto TCS - Automatización E2E de Compra
-Este proyecto implementa la automatización de extremo a extremo (E2E) del flujo de compra de productos en el sitio DemoBlaze.
-El objetivo principal es demostrar buenas prácticas en automatización de pruebas funcionales, aplicando patrones de diseño modernos y herramientas robustas, garantizando la confiabilidad, escalabilidad y mantenibilidad del código.
+🛒 Proyecto: Reto TCS – Automatización E2E de Compra
+📖 Descripción
 
+Este proyecto implementa la automatización de extremo a extremo (E2E) del flujo de compra de productos en el sitio DemoBlaze
+.
+El objetivo principal es demostrar buenas prácticas en automatización de pruebas funcionales, aplicando patrones de diseño modernos y herramientas robustas, garantizando la confiabilidad, escalabilidad y mantenibilidad del código.
 
 El sistema simula el flujo de un usuario que:
 
@@ -15,9 +17,7 @@ Llena el formulario de compra.
 
 Confirma la orden y valida el mensaje final de éxito.
 
-
-Objetivo
-Automatizar el escenario donde un usuario:
+🎯 Objetivo del Reto
 
 Validar conocimientos técnicos en automatización de pruebas E2E.
 
@@ -27,21 +27,16 @@ Evidenciar el uso de tecnologías modernas (Java 21, Serenity, Cucumber, Seleniu
 
 Reforzar las buenas prácticas de testing empresarial: modularidad, reutilización y legibilidad.
 
+🏗️ Estructura del Proyecto
+📂 src/test/java
+ ├── features/          # Escenarios .feature escritos en Gherkin
+ ├── stepsdefinitions/  # Definiciones de pasos (StepDefinition)
+ ├── tasks/             # Acciones de usuario (Login, compra, etc.)
+ ├── questions/         # Validaciones y verificaciones (textos, elementos)
+ ├── userinterface/     # Localizadores de elementos web
+ └── runners/           # Clase runner para ejecutar pruebas con Serenity y Cucumber
 
-Estructura del Proyecto
-features/: Contiene el archivo .feature con el escenario de prueba escrito en lenguaje Gherkin.
-
-stepsdefinitions/: Contiene las definiciones de pasos (StepDefinition) que implementan los pasos del archivo .feature.
-
-tasks/: Implementa las acciones del usuario como tareas reutilizables, por ejemplo: Login y proceso de compra.
-
-questions/: Contiene clases que permiten validar respuestas en el flujo, como textos o elementos visibles.
-
-userinterface/: Contiene los localizadores (elementos web) utilizados durante la ejecución.
-
-runners/: Clase runner que permite ejecutar los tests con Cucumber y Serenity.
-
-Herramientas y Tecnologías
+🛠️ Tecnologías y Herramientas
 
 Lenguaje: Java 21
 
@@ -57,28 +52,49 @@ Gestión de drivers: WebDriverManager
 
 Patrón de diseño aplicado: Screenplay Pattern
 
+⚙️ Instalación y Ejecución
+🔹 Requisitos Previos
 
-Instalación y Ejecución
-Escenario del archivo Feature
+JDK 21 instalado
 
-Feature: RETO TCS, REALIZAR E2E DEL PROCEDO DE COMPRA DE 2 PRODUCTOS
+Maven configurado
 
-Scenario: Usuario realiza ingreso satisfactorio y compra de productos
-Given El usuario apertura la pagina
-When El usuario ingresa las credenciales de manera correcta
-Then El usuario realizar la compra de 2 productos
+Navegador Google Chrome
+
+🔹 Pasos para ejecutar
+
+Clonar el repositorio:
+
+git clone https://github.com/tu-usuario/reto-tcs-automatizacion.git
 
 
-Validación Final
-La automatización finaliza validando el texto:
+Posicionarse en la carpeta del proyecto:
 
-Validacion Final.
+cd reto-tcs-automatizacion
+
+
+Ejecutar las pruebas con Maven:
+
+mvn clean verify
+
+📌 Escenario Automatizado (Gherkin)
+Feature: RETO TCS – Realizar E2E del proceso de compra de 2 productos
+
+  Scenario: Usuario realiza ingreso satisfactorio y compra de productos
+    Given El usuario apertura la pagina
+    When El usuario ingresa las credenciales de manera correcta
+    Then El usuario realizar la compra de 2 productos
+
+✅ Validación Final
+
+La automatización concluye validando la aparición del mensaje:
+
 "Thank you for your purchase!"
 
-Este mensaje aparece después de realizar una compra exitosa.    
 
+Este mensaje confirma que el flujo de compra fue exitoso.
 
-Consideraciones
+📊 Consideraciones Técnicas
 
 Se utiliza @Managed para inicializar el WebDriver de forma automática con Serenity.
 
@@ -93,6 +109,3 @@ Reutilización del código.
 Escalabilidad del framework.
 
 Mejor legibilidad y mantenibilidad.
-
-
-
